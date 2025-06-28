@@ -46,7 +46,7 @@ export function getRollupConfig(opts: GetRollupConfigOptions = {}): RollupOption
             outputCJS: path.join(_outputDir, `${name}${minify ? `.min` : ''}.cjs`),
             outputUMD: path.join(
                 _outputDir,
-                `${decapitalize([...(browserName || name)] as DecapitalizeOpts)}${minify ? `.min` : ''}.umd.js`,
+                `${decapitalize([...(browserName || name)] as DecapitalizeOpts)}.umd${minify ? `.min` : ''}.js`,
             ),
             outputType: path.join(_outputDir, `${name}${minify ? `.min` : ''}.d.ts`),
         };
