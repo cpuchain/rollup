@@ -1,6 +1,6 @@
 {
     "name": "@cpuchain/rollup",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Rollup plugin & config generator for CPUchain TypeScript projects",
     "license": "MIT",
     "author": "CPUchain",
@@ -55,7 +55,7 @@
         "yoctocolors": "^2.1.1"
     },
     "devDependencies": {
-        "@cpuchain/eslint": "^1.0.5",
+        "@cpuchain/eslint": "^1.0.6",
         "@types/node": "^22.15.33",
         "@vitest/coverage-v8": "^3.2.4",
         "cross-env": "^7.0.3",
