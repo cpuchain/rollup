@@ -1,0 +1,73 @@
+{
+    "name": "@cpuchain/rollup",
+    "version": "1.0.11",
+    "description": "Rollup plugin & config generator for CPUchain TypeScript projects",
+    "license": "MIT",
+    "author": "CPUchain",
+    "type": "module",
+    "main": "./lib/index.cjs",
+    "module": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./lib/index.js",
+            "require": "./lib/index.cjs",
+            "default": "./lib/index.js"
+        },
+        "./typesWorker": {
+            "import": "./lib/typesWorker.js",
+            "require": "./lib/typesWorker.cjs",
+            "default": "./lib/typesWorker.js"
+        }
+    },
+    "keywords": [
+        "cpuchain",
+        "rollup",
+        "bundler",
+        "esbuild",
+        "umd",
+        "esm"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cpuchain/rollup.git"
+    },
+    "scripts": {
+        "lint": "eslint src/**/*.ts test/**/*.ts",
+        "build": "tsc -p tsconfig.types.json --noEmit && rollup -c",
+        "start": "tsx src/start.ts",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs",
+        "test": "vitest && istanbul-badges-readme --colors=\"red:50,yellow:60\""
+    },
+    "dependencies": {
+        "@rollup/plugin-commonjs": "^29.0.0",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "@rollup/plugin-replace": "^6.0.3",
+        "@rollup/plugin-terser": "^0.4.4",
+        "dts-bundle-generator": "^9.5.1",
+        "esbuild": "^0.27.2",
+        "rollup": "^4.54.0",
+        "rollup-plugin-esbuild": "^6.2.1",
+        "rollup-plugin-polyfill-node": "^0.13.0",
+        "yoctocolors": "^2.1.2"
+    },
+    "devDependencies": {
+        "@cpuchain/eslint": "^1.0.11",
+        "@types/node": "^25.0.3",
+        "@vitest/coverage-v8": "^4.0.16",
+        "cross-env": "^10.1.0",
+        "istanbul-badges-readme": "^1.9.0",
+        "ts-node": "^10.9.2",
+        "tsc": "^2.0.4",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3",
+        "vitepress": "^1.6.4",
+        "vitest": "^4.0.16"
+    },
+    "resolutions": {
+        "fast-glob": ">=3.3.3"
+    }
+}
